@@ -1,0 +1,22 @@
+{
+  "extends": ["tslint-config-airbnb"],
+  "linterOptions": {
+    "exclude": [
+      "node_modules/**/*.ts",
+      "src/migrations/**/*.ts"
+    ]
+  },
+  "rules": {
+    "no-duplicate-imports": false,
+    "variable-name": [
+      true,
+      "ban-keywords",
+      "check-format",
+      "allow-pascal-case"
+    ],
+    "trailing-comma": false,
+    "import-name": false,
+    "quotemark": [true, "single"],
+    "max-line-length": [true, 150]
+  }
+}

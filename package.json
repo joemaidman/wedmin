@@ -1,0 +1,30 @@
+{
+  "name": "wedmin",
+  "version": "1.0.0",
+  "description": "A node backend using express, postgres, graphql and TypeORM to serve wedding guest information to frontend clients",
+  "main": "index.js",
+  "scripts": {
+    "start": "ts-node src/index.ts",
+    "start:watch": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/index.ts",
+    "migrate": "./node_modules/.bin/ts-node ./node_modules/.bin/typeorm migration:run",
+    "generate-migration": "./node_modules/.bin/ts-node ./node_modules/.bin/typeorm migration:generate"
+  },
+  "author": "Joe Maidman",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.3",
+    "express-graphql": "^0.6.12",
+    "graphql": "^0.13.2",
+    "pg": "^7.4.3",
+    "reflect-metadata": "^0.1.12",
+    "ts-node": "3.3.0",
+    "type-graphql": "^0.12.2",
+    "typeorm": "^0.2.7"
+  },
+  "devDependencies": {
+    "nodemon": "^1.17.5",
+    "tslint": "^5.10.0",
+    "tslint-config-airbnb": "^5.9.2",
+    "typescript": "^2.9.2"
+  }
+}
